@@ -28,22 +28,20 @@
     <input type="checkbox" id="green" name="green" value="green">
     <label for="vehicle3"> green</label><br>
   </div>
-  <div class="dropdown box">
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-      Dropdown
-    </button>
-    <div class="dropdown-menu">
-      <button class="dropdown-item" type="button">Creature</button>
-      <button class="dropdown-item" type="button">Instant</button>
-      <button class="dropdown-item" type="button">Sorcery</button>
-      <button class="dropdown-item" type="button">Enchantment</button>
-      <button class="dropdown-item" type="button">Artifact</button>
-      <button class="dropdown-item" type="button">Land</button>
-      <button class="dropdown-item" type="button">Planeswalker</button>
-      <button class="dropdown-item" type="button">tribal</button>
-      <button class="dropdown-item" type="button">conspiracy</button>
-    </div>
-  </div>
+  
+  <select class="w-100">
+    <option value="" disabled selected>Card Type</option>
+    <option value="maps">Creature</option>
+    <option value="audio">Instant</option>
+    <option value="photos">Sorcery</option>
+    <option value="manuscripts">Enchantment</option>
+    <option value="newspapers">Artifact</option>
+    <option value="film-and-videos">Land</option>
+    <option value="notated-music">Planeswalker</option>
+    <option value="websites">Tribal</option>
+    <option value="websites">Conspiracry</option>
+  </select>
+  
   <div class="input-group flex-nowrap box">
     <input type="text" class="form-control" id="cmc" placeholder="Converted Mana Cost" aria-label="cmc" aria-describedby="addon-wrapping">
     <button type="submit" class="btn">Search</button>
