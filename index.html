@@ -4,12 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>MTG cardfinder</title>
 </head>
 <body>
-  
+  <header>
+    Welcome to a Magic the Gathering card finder
+  </header>
+  <div class="input-group flex-nowrap box">
+    <input type="text" class="form-control" id="cardName" placeholder="Card Name" aria-label="Cardname" aria-describedby="addon-wrapping">
+    <button type="submit" class="btn">Search</button>
+  </div>
+  <div class="box">
+    <input type="checkbox" id="white" name="white" value="white">
+    <label for="vehicle1"> white </label><br>
+    <input type="checkbox" id="blue" name="blue" value="blue">
+    <label for="vehicle2"> blue </label><br>
+    <input type="checkbox" id="black" name="black" value="black">
+    <label for="vehicle3"> black</label><br>
+    <input type="checkbox" id="red" name="red" value="red">
+    <label for="vehicle3"> red</label><br>
+    <input type="checkbox" id="green" name="green" value="green">
+    <label for="vehicle3"> green</label><br>
+  </div>
+  <div class="dropdown box">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+      Dropdown
+    </button>
+    <div class="dropdown-menu">
+      <button class="dropdown-item" type="button">Creature</button>
+      <button class="dropdown-item" type="button">Instant</button>
+      <button class="dropdown-item" type="button">Sorcery</button>
+      <button class="dropdown-item" type="button">Enchantment</button>
+      <button class="dropdown-item" type="button">Artifact</button>
+      <button class="dropdown-item" type="button">Land</button>
+      <button class="dropdown-item" type="button">Planeswalker</button>
+      <button class="dropdown-item" type="button">tribal</button>
+      <button class="dropdown-item" type="button">conspiracy</button>
+    </div>
+  </div>
+  <div class="input-group flex-nowrap box">
+    <input type="text" class="form-control" id="cmc" placeholder="Converted Mana Cost" aria-label="cmc" aria-describedby="addon-wrapping">
+    <button type="submit" class="btn">Search</button>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

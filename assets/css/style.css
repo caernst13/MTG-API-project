@@ -1,0 +1,16 @@
+:root {
+    --purp: rgb(73, 16, 128);
+    --darkg: rgb(61, 55, 55);
+    --lightg: rgb(131, 124, 124);
+}
+
+* {
+    box-sizing: border-box;
+    background-color: var(--lightg);
+}
+header{
+    background-color: var(--purp);
+    color: white;
+    text-align: center;
+    font-size: 58px;
+}
