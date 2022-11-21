@@ -12,10 +12,11 @@
   <header>
     Welcome to a Magic the Gathering card finder
   </header>
-  <div class="input-group flex-nowrap box">
-    <input type="text" class="form-control" id="cardName" placeholder="Card Name" aria-label="Cardname" aria-describedby="addon-wrapping">
+  <form id="nameSearch" class="card-body">
+    <label class="form-label" for="cardName">Card Name</label>
+    <input name="cardName" id="cardName" type="text" autofocus="true" class="form-input" />
     <button type="submit" class="btn">Search</button>
-  </div>
+  </form>
   <div class="box">
     <input type="checkbox" id="white" name="white" value="white">
     <label for="vehicle1"> white </label><br>
@@ -28,8 +29,8 @@
     <input type="checkbox" id="green" name="green" value="green">
     <label for="vehicle3"> green</label><br>
   </div>
-  
-  <select class="w-100">
+
+  <select id="cardType" class="w-100">
     <option value="" disabled selected>Card Type</option>
     <option value="maps">Creature</option>
     <option value="audio">Instant</option>

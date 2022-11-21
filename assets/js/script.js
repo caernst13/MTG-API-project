@@ -1,5 +1,5 @@
-console.log('test')
-
+var nameFormEl = document.querySelector('#nameSearch')
+var cardNameEl = document.querySelector('#cardName')
 function testing() {
     var requestURL = 'http://api.magicthegathering.io/v1/cards'
 
@@ -13,3 +13,13 @@ function testing() {
 };
 
 testing();
+
+    
+var nameSearch = function (event) {
+    event.preventDefault();
+    var cardName = cardNameEl.value.trim();
+    console.log(cardName)
+    console.log('test')
+};
+
+nameFormEl.addEventListener('submit', nameSearch);
