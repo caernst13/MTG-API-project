@@ -29,7 +29,7 @@ function nameSearch() {
         return response.json();
     })
     .then(function (data) {
-        for (var i = 1; i < 100; i++) {
+        for (var i = 0; i < 101; i++) {
             if (data.cards[i].name.toLowerCase().includes(cardName) && data.cards[i].name != data.cards[i-1].name){
                 console.log(data.cards[i].imageUrl);
             
