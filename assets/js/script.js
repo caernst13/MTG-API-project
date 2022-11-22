@@ -4,9 +4,11 @@ var otherSearchEl = document.querySelector('#otherSearch')
 var cardTypeEl = document.querySelector('#cardType')
 var cmcEl = document.querySelector('#cmc')
 function testing() {
-    var requestURL = 'http://api.magicthegathering.io/v1/cards'
+    var requestURL = 'https://api.magicthegathering.io/v1/cards'
 
-    fetch(requestURL)
+    fetch(requestURL, {
+        headers: {'Total-Count': '31090'}
+    })
     .then(function (response){
         return response.json();
     })

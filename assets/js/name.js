@@ -1,5 +1,5 @@
 var returnEl = document.querySelector("#return")
-
+var start = document.querySelector("#start")
 var cardName = localStorage.getItem("cardName")     
 console.log(cardName)
 
@@ -9,7 +9,7 @@ var homePage = function (event) {
 }
 
 function testing() {
-    var requestURL = 'http://api.magicthegathering.io/v1/cards'
+    var requestURL = 'https://api.magicthegathering.io/v1/cards'
 
     fetch(requestURL)
     .then(function (response){
@@ -17,23 +17,29 @@ function testing() {
     })
     .then(function (data) {
         console.log(data.cards)
+        var img = document.createElement('img');
+        img.setAttribute('src', data.cards[0].imagerul)
     });
 };
 function nameSearch() {
-    var requestURL = 'http://api.magicthegathering.io/v1/cards'
+    var requestURL = 'https://api.magicthegathering.io/v1/cards'
 
     fetch(requestURL)
     .then(function (response){
         return response.json();
     })
     .then(function (data) {
-        for (var i = 0; i < data.length; i++) {
-            if (data.cards[i].name.includes(cardName)){
-                console.log(data.cards[i].name)
-            }
+        for (var i = 1; i < 100; i++) {
+            if (data.cards[i].name.toLowerCase().includes(cardName) && data.cards[i].name != data.cards[i-1].name){
+                console.log(data.cards[i].imageUrl);
+            
+                var img = document.createElement("img")
+                img.setAttribute('src', data.cards[i].imageurl);
+                start.appendChild(img);}
+                
         }
     });
 };
 testing();
-// nameSearch();
+nameSearch();
 returnEl.addEventListener('submit', homePage)
