@@ -34,7 +34,7 @@ function nameSearch() {
                 console.log(data.cards[i].imageUrl);
             
                 var img = document.createElement("img")
-                img.setAttribute('src', data.cards[i].imageurl);
+                img.setAttribute('src', data.cards[i].imageUrl);
                 start.appendChild(img);}
                 
         }
