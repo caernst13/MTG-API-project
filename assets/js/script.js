@@ -1,8 +1,9 @@
-var nameFormEl = document.querySelector('#nameSearch')
-var cardNameEl = document.querySelector('#cardName')
+var wordFormEl = document.querySelector('#wordSearch')
+var textSearchEl = document.querySelector('#textSearch')
 var otherSearchEl = document.querySelector('#otherSearch')
 var cardTypeEl = document.querySelector('#cardType')
 var cmcEl = document.querySelector('#cmc')
+var typeSearchEl = document.querySelector('#typeSearch')
 function testing() {
     var requestURL = 'https://api.magicthegathering.io/v1/cards'
 
@@ -19,13 +20,14 @@ function testing() {
 
 testing();
 
-var nameSearch = function (event) {
+var wordSearch = function (event) {
     event.preventDefault();
 
-    var cardName = cardNameEl.value.trim().toLowerCase();
-    console.log(cardName);
-    localStorage.setItem("cardName", cardName);
-
+    var textSearch = textSearchEl.value.trim().toLowerCase();
+    console.log(textSearch);
+    localStorage.setItem("textSearch", textSearch);
+    var typeSearch = typeSearchEl.value
+    localStorage.setItem("typeSearch", typeSearch)
     window.location.href = 'name.html'
 };
 
@@ -54,5 +56,5 @@ var otherSearch = function (event) {
     
 }
 
-nameFormEl.addEventListener('submit', nameSearch);
+wordFormEl.addEventListener('submit', wordSearch);
 otherSearchEl.addEventListener('submit', otherSearch);

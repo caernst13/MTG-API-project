@@ -17,7 +17,7 @@ header{
 .top{
     display: flex;
 }
-#nameSearch{
+#wordSearch{
     text-align: center;
 }
 .col-sm {
@@ -33,5 +33,7 @@ a {
 
 a img {
     padding: 12px;
-    max-width: 40%;
+    width: 22%;
+   
 }
+

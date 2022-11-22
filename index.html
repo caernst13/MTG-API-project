@@ -12,9 +12,14 @@
   <header>
     Welcome to a Magic the Gathering card finder
   </header>    
-  <form id="nameSearch">
-    <label class="form-label" for="cardName">Card Name</label>
-    <input name="cardName" id="cardName" type="text" autofocus="true" class="form-input" />
+  <form id="wordSearch">
+    <select id="typeSearch">
+      <option Value="" disabled Selected>Type of Search</option>
+      <option value="name">Card Name</option>
+      <option value="text">Card Text</option>
+      <option value="subType">Sub Type</option>
+    </select>
+    <input name="textSearch" id="textSearch" type="text" autofocus="true" class="form-input" />
     <button type="submit" class="btn">Search</button>
   </form>
   <form id="otherSearch">
