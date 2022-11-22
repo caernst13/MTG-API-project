@@ -4,8 +4,8 @@ var cardType = localStorage.getItem('cardType')
 console.log(cardType)
 var selected = localStorage.getItem('selected')
 console.log(selected)
-if (cmc) {
-    console.log('there is a cmc')
+if (!selected) {
+    console.log('empty')
 }
 var returnEl = document.querySelector("#return")
 var start = document.querySelector('#start')
@@ -36,9 +36,9 @@ function search() {
         return response.json();
     })
     .then(function (data) {
-        if (cmc){
+        if (cmc && cardType && selected){
             for (var i = 0; i < 101; i++) {
-                if (data.cards[i].cmc == cmc && data.cards[i].name != data.cards[i-1].name){
+                if (data.cards[i].cmc == cmc && data.cards[i].types.includes(cardType) && data.cards[i].colors.includes(selected) && data.cards[i].name != data.cards[i-1].name){
                 console.log(data.cards[i].imageUrl);
                 var img = document.createElement("img")
                 img.setAttribute('src', data.cards[i].imageUrl);
