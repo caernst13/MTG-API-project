@@ -11,42 +11,46 @@
 <body>
   <header>
     Welcome to a Magic the Gathering card finder
-  </header>
-  <form id="nameSearch" class="card-body">
+  </header>    
+  <form id="nameSearch">
     <label class="form-label" for="cardName">Card Name</label>
     <input name="cardName" id="cardName" type="text" autofocus="true" class="form-input" />
     <button type="submit" class="btn">Search</button>
   </form>
   <form id="otherSearch">
-    <div class="box">
-      <input type="checkbox" id="white" name="white" value="W">
-      <label for="vehicle1"> white </label><br>
-      <input type="checkbox" id="blue" name="blue" value="U">
-      <label for="vehicle2"> blue </label><br>
-      <input type="checkbox" id="black" name="black" value="B">
-      <label for="vehicle3"> black</label><br>
-      <input type="checkbox" id="red" name="red" value="R">
-      <label for="vehicle3"> red</label><br>
-      <input type="checkbox" id="green" name="green" value="g">
-      <label for="vehicle3"> green</label><br>
-    </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm">
+          <input type="checkbox" id="white" name="white" value="W">
+          <label for="vehicle1"> white </label><br>
+          <input type="checkbox" id="blue" name="blue" value="U">
+          <label for="vehicle2"> blue </label><br>
+          <input type="checkbox" id="black" name="black" value="B">
+          <label for="vehicle3"> black</label><br>
+          <input type="checkbox" id="red" name="red" value="R">
+          <label for="vehicle3"> red</label><br>
+          <input type="checkbox" id="green" name="green" value="g">
+          <label for="vehicle3"> green</label><br>
+        </div>
 
-    <select id="cardType" class="w-100">
-      <option value="" disabled selected>Card Type</option>
-      <option value="Creature">Creature</option>
-      <option value="Instant">Instant</option>
-      <option value="Sorcery">Sorcery</option>
-      <option value="Enchantment">Enchantment</option>
-      <option value="Artifact">Artifact</option>
-      <option value="Land">Land</option>
-      <option value="Planeswalker">Planeswalker</option>
-      <option value="Tribal">Tribal</option>
-      <option value="Conspiracy">Conspiracry</option>
-    </select>
+        <select id="cardType" class="col-sm">
+          <option value="" disabled selected>Card Type</option>
+          <option value="Creature">Creature</option>
+          <option value="Instant">Instant</option>
+          <option value="Sorcery">Sorcery</option>
+          <option value="Enchantment">Enchantment</option>
+          <option value="Artifact">Artifact</option>
+          <option value="Land">Land</option>
+          <option value="Planeswalker">Planeswalker</option>
+          <option value="Tribal">Tribal</option>
+          <option value="Conspiracy">Conspiracry</option>
+        </select>
 
-    <div class="input-group flex-nowrap box">
-      <input type="text" class="form-control" id="cmc" placeholder="Converted Mana Cost" aria-label="cmc" aria-describedby="addon-wrapping">
-      <button type="submit" class="btn">Search</button>
+        <div class="input-group col-sm">
+          <input type="text" class="form-control" id="cmc" placeholder="Converted Mana Cost" aria-label="cmc" aria-describedby="addon-wrapping">
+          <button type="submit" class="btn">Search</button>
+        </div>
+      </div>
     </div>
   </form>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

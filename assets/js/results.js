@@ -29,7 +29,7 @@ var homePage = function (event) {
 }
 
 function search() {
-    var requestURL = 'https://api.magicthegathering.io/v1/cards'
+    for (i=1; i<500; i++) {var requestURL = 'https://api.magicthegathering.io/v1/cards?page='+i
 
     fetch(requestURL)
     .then(function (response){
@@ -96,6 +96,6 @@ function search() {
             } else {
                 window.location.href = 'index.html'
             } 
-})}
+})}}
 search();
 returnEl.addEventListener('submit', homePage)

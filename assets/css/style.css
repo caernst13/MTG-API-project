@@ -14,3 +14,24 @@ header{
     text-align: center;
     font-size: 58px;
 }
+.top{
+    display: flex;
+}
+#nameSearch{
+    text-align: center;
+}
+.col-sm {
+    color:black;
+}
+a {
+    display: flex;
+    background-color: var(--lightg);
+    align-items: center;
+    padding: 12px;
+    flex-direction: column;
+}
+
+a img {
+    padding: 12px;
+    max-width: 40%;
+}

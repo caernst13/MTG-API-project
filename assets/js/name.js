@@ -40,7 +40,7 @@ function nameSearch() {
                 start.appendChild(img);}
                 
         }
-    });
+});
 };
 testing();
 nameSearch();

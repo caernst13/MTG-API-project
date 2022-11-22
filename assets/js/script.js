@@ -7,7 +7,7 @@ function testing() {
     var requestURL = 'https://api.magicthegathering.io/v1/cards'
 
     fetch(requestURL, {
-        headers: {'Total-Count': '31090'}
+        headers: {'Count': '31090'}
     })
     .then(function (response){
         return response.json();
