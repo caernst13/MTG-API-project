@@ -44,9 +44,58 @@ function search() {
                 img.setAttribute('src', data.cards[i].imageUrl);
                 start.appendChild(img);}
                 }
-            }
+            } else if (cmc && cardType){
+                for (var i = 0; i < 101; i++) {
+                    if (data.cards[i].cmc == cmc && data.cards[i].types.includes(cardType) && data.cards[i].name != data.cards[i-1].name){
+                    console.log(data.cards[i].imageUrl);
+                    var img = document.createElement("img")
+                    img.setAttribute('src', data.cards[i].imageUrl);
+                    start.appendChild(img);}
+                    }
+            } else if (cmc && selected){
+                for (var i = 0; i < 101; i++) {
+                    if (data.cards[i].cmc == cmc && data.cards[i].colors.includes(selected) && data.cards[i].name != data.cards[i-1].name){
+                    console.log(data.cards[i].imageUrl);
+                    var img = document.createElement("img")
+                    img.setAttribute('src', data.cards[i].imageUrl);
+                    start.appendChild(img);}
+                    }
   
-        })
-}
+            } else if (selected && cardType){
+                for (var i = 0; i < 101; i++) {
+                    if (data.cards[i].colors.includes(selected) && data.cards[i].types.includes(cardType) && data.cards[i].name != data.cards[i-1].name){
+                    console.log(data.cards[i].imageUrl);
+                    var img = document.createElement("img")
+                    img.setAttribute('src', data.cards[i].imageUrl);
+                    start.appendChild(img);}
+                    }
+            } else if (cmc ){
+                for (var i = 0; i < 101; i++) {
+                    if (data.cards[i].cmc == cmc && data.cards[i].name != data.cards[i-1].name){
+                    console.log(data.cards[i].imageUrl);
+                    var img = document.createElement("img")
+                    img.setAttribute('src', data.cards[i].imageUrl);
+                    start.appendChild(img);}
+                    } 
+            } else if (cardType){
+                for (var i = 0; i < 101; i++) {
+                    if (data.cards[i].types.includes(cardType) && data.cards[i].name != data.cards[i-1].name){
+                    console.log(data.cards[i].imageUrl);
+                    var img = document.createElement("img")
+                    img.setAttribute('src', data.cards[i].imageUrl);
+                    start.appendChild(img);}
+                    }
+            } else if (selected){
+                for (var i = 0; i < 101; i++) {
+                    if (data.cards[i].colors.includes(selected) && data.cards[i].name != data.cards[i-1].name){
+                    console.log(data.cards[i].imageUrl);
+                    var img = document.createElement("img")
+                    img.setAttribute('src', data.cards[i].imageUrl);
+                    start.appendChild(img);}
+                    }  
+            } else {
+                window.location.href = 'index.html'
+            } 
+})}
 search();
 returnEl.addEventListener('submit', homePage)

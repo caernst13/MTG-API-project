@@ -22,6 +22,8 @@ function testing() {
     });
 };
 function nameSearch() {
+    if (!cardName) {window.location.href = 'index.html'}
+    
     var requestURL = 'https://api.magicthegathering.io/v1/cards'
 
     fetch(requestURL)
