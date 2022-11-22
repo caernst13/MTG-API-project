@@ -19,12 +19,12 @@ testing();
 
 var nameSearch = function (event) {
     event.preventDefault();
-    
-    var cardName = cardNameEl.value.trim();
+
+    var cardName = cardNameEl.value.trim().toLowerCase();
     console.log(cardName);
     localStorage.setItem("cardName", cardName);
 
-    window.location.href = 'results.html'
+    window.location.href = 'name.html'
 };
 
 var otherSearch = function (event) {
